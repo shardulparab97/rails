@@ -84,7 +84,10 @@ module ActionDispatch
         PASS_NOT_FOUND
       end
     end
-
+    
+    # Returns true if the request has set a header matching the given key parameter
+    #
+    #    request.key? :ip_spoofing_check # => true
     def key?(key)
       has_header? key
     end
